@@ -20,8 +20,8 @@ export default defineNuxtConfig({
   modules: [
     ['@nuxtjs/google-fonts', {
       families: {
-        Montserrat: [400, 600, 700],
-        'Permanent Marker': [400],
+        Cormorant: [400, 500, 700, '400italic', '700italic'],
+        'Sedgwick Ave': [400],
       },
       display: 'swap',
       preload: true,
@@ -66,7 +66,7 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#09090b' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }
       ]
     }

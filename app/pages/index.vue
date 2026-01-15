@@ -21,10 +21,10 @@
       
       <!-- Content -->
       <div class="relative z-10 text-center px-4">
-        <h1 class="text-6xl md:text-8xl font-bold text-lime-400 mb-6 drop-shadow-lg">
+        <h1 class="text-6xl md:text-8xl font-display text-lime-400 mb-6 drop-shadow-lg">
           Vicky Steane
         </h1>
-        <p class="text-2xl md:text-3xl text-gray-300 mb-8 drop-shadow-md">
+        <p class="text-2xl md:text-3xl text-gray-300 mb-8 drop-shadow-md font-medium">
           Artist & Illustrator
         </p>
         <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12 drop-shadow-md">
@@ -49,7 +49,7 @@
 
     <!-- Services Preview -->
     <section class="container mx-auto px-4 py-24">
-      <h2 class="text-5xl font-bold text-lime-400 mb-12 text-center">Services</h2>
+      <h2 class="text-5xl font-display text-lime-400 mb-12 text-center">Services</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <NuxtLink
           to="/services/murals"
@@ -92,7 +92,7 @@
     <!-- Portfolio Preview -->
     <section class="bg-zinc-900 py-24">
       <div class="container mx-auto px-4">
-        <h2 class="text-5xl font-bold text-lime-400 mb-12 text-center">Featured Work</h2>
+        <h2 class="text-5xl font-display text-lime-400 mb-12 text-center">Featured Work</h2>
         <div class="grid md:grid-cols-3 gap-8 mb-12">
           <NuxtLink to="/portfolio/paintings" class="group">
             <div class="aspect-square bg-zinc-800 rounded-lg overflow-hidden mb-4 relative">

@@ -3,11 +3,17 @@
     class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/95 backdrop-blur-sm border-b border-zinc-800 transition-transform duration-300"
     :class="{ '-translate-y-full': hideHeader && scrolled }"
   >
-    <div class="container mx-auto px-4 py-4">
+    <div class="container mx-auto px-4 py-3">
       <div class="flex items-center justify-between">
         <!-- Logo/Brand -->
         <NuxtLink to="/" class="flex items-center gap-3 group">
-          <div class="text-2xl font-bold text-lime-400 group-hover:text-lime-300 transition-colors">
+          <NuxtImg
+            src="/VS_Logo_New.png"
+            alt="Vicky Steane Logo"
+            class="h-12 w-auto transition-transform group-hover:scale-105"
+            loading="eager"
+          />
+          <div class="text-2xl font-display text-lime-400 group-hover:text-lime-300 transition-colors">
             Vicky Steane Art
           </div>
         </NuxtLink>
@@ -19,7 +25,7 @@
   </header>
 
   <!-- Spacer to prevent content from going under fixed header -->
-  <div class="h-20"></div>
+  <div class="h-[76px]"></div>
 </template>
 
 <script setup lang="ts">
