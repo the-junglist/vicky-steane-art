@@ -1,28 +1,45 @@
 <template>
   <div class="min-h-screen bg-zinc-950">
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center">
-      <div class="absolute inset-0 bg-gradient-to-b from-zinc-900/50 to-zinc-950"></div>
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background Image Grid -->
+      <div class="absolute inset-0 grid grid-cols-3 md:grid-cols-6 gap-0">
+        <div v-for="(image, index) in heroImages" :key="index" class="relative overflow-hidden">
+          <NuxtImg
+            :src="image"
+            :alt="`Artwork ${index + 1}`"
+            class="w-full h-full object-cover opacity-40"
+            loading="eager"
+            :style="{ animationDelay: `${index * 0.1}s` }"
+          />
+        </div>
+      </div>
+      
+      <!-- Gradient Overlays -->
+      <div class="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/70 to-zinc-950"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/50 via-transparent to-zinc-950/50"></div>
+      
+      <!-- Content -->
       <div class="relative z-10 text-center px-4">
-        <h1 class="text-6xl md:text-8xl font-bold text-lime-400 mb-6">
+        <h1 class="text-6xl md:text-8xl font-bold text-lime-400 mb-6 drop-shadow-lg">
           Vicky Steane
         </h1>
-        <p class="text-2xl md:text-3xl text-gray-300 mb-8">
+        <p class="text-2xl md:text-3xl text-gray-300 mb-8 drop-shadow-md">
           Artist & Illustrator
         </p>
-        <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12 drop-shadow-md">
           Creating bespoke murals, paintings, collages, and illustrations for over 20 years
         </p>
-        <div class="flex gap-4 justify-center">
+        <div class="flex gap-4 justify-center flex-wrap">
           <NuxtLink
             to="/portfolio"
-            class="bg-lime-500 hover:bg-lime-400 text-zinc-950 font-bold py-4 px-8 rounded-lg transition-colors"
+            class="bg-lime-500 hover:bg-lime-400 text-zinc-950 font-bold py-4 px-8 rounded-lg transition-colors shadow-lg"
           >
             View Portfolio
           </NuxtLink>
           <NuxtLink
             to="/contact"
-            class="bg-zinc-800 hover:bg-zinc-700 text-lime-400 font-bold py-4 px-8 rounded-lg transition-colors border-2 border-lime-500"
+            class="bg-zinc-800 hover:bg-zinc-700 text-lime-400 font-bold py-4 px-8 rounded-lg transition-colors border-2 border-lime-500 shadow-lg"
           >
             Get In Touch
           </NuxtLink>
@@ -133,6 +150,25 @@
 </template>
 
 <script setup lang="ts">
+// Hero background images - mix from all categories
+const heroImages = [
+  // Row 1
+  '/img/portfolio/paintings/barcelona.jpeg',
+  '/img/portfolio/collages/Map+Kingfisher.jpg',
+  '/img/portfolio/murals/BOOMTOWN.jpg',
+  '/img/portfolio/illustrations/Robot+1+2021.jpg',
+  '/img/portfolio/paintings/heron.jpg',
+  '/img/portfolio/collages/deer.jpg',
+  
+  // Row 2 (hidden on mobile, shown on md+)
+  '/img/portfolio/murals/TEMPLE.jpg',
+  '/img/portfolio/paintings/detroit.jpg',
+  '/img/portfolio/illustrations/polar+bear.jpg',
+  '/img/portfolio/collages/robin.jpeg',
+  '/img/portfolio/murals/BOB+BAR.jpg',
+  '/img/portfolio/paintings/blue-panels---web.jpg',
+]
+
 useHead({
   title: 'Vicky Steane Art - Custom Murals, Paintings & Commissions',
   meta: [
@@ -140,3 +176,21 @@ useHead({
   ]
 })
 </script>
+
+<style scoped>
+/* Subtle animation for hero images */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+
+.grid > div img {
+  animation: fadeIn 1s ease-out forwards;
+}
+</style>
