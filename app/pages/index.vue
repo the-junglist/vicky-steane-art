@@ -78,30 +78,42 @@
         <h2 class="text-5xl font-bold text-lime-400 mb-12 text-center">Featured Work</h2>
         <div class="grid md:grid-cols-3 gap-8 mb-12">
           <NuxtLink to="/portfolio/paintings" class="group">
-            <div class="aspect-square bg-zinc-800 rounded-lg overflow-hidden mb-4">
-              <div class="w-full h-full flex items-center justify-center text-zinc-600">
-                <Icon name="mdi:palette" class="text-6xl" />
-              </div>
+            <div class="aspect-square bg-zinc-800 rounded-lg overflow-hidden mb-4 relative">
+              <NuxtImg
+                src="/img/portfolio/paintings/barcelona.jpeg"
+                alt="Paintings Portfolio"
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/50 to-transparent"></div>
             </div>
             <h3 class="text-xl font-bold text-lime-400 group-hover:text-lime-300">Paintings</h3>
             <p class="text-gray-400">Mixed media & acrylic works</p>
           </NuxtLink>
 
           <NuxtLink to="/portfolio/collages" class="group">
-            <div class="aspect-square bg-zinc-800 rounded-lg overflow-hidden mb-4">
-              <div class="w-full h-full flex items-center justify-center text-zinc-600">
-                <Icon name="mdi:collage" class="text-6xl" />
-              </div>
+            <div class="aspect-square bg-zinc-800 rounded-lg overflow-hidden mb-4 relative">
+              <NuxtImg
+                src="/img/portfolio/collages/Map+Kingfisher.jpg"
+                alt="Collages Portfolio"
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/50 to-transparent"></div>
             </div>
             <h3 class="text-xl font-bold text-lime-400 group-hover:text-lime-300">Collages</h3>
             <p class="text-gray-400">Intricate map collages</p>
           </NuxtLink>
 
           <NuxtLink to="/portfolio/murals" class="group">
-            <div class="aspect-square bg-zinc-800 rounded-lg overflow-hidden mb-4">
-              <div class="w-full h-full flex items-center justify-center text-zinc-600">
-                <Icon name="mdi:wall" class="text-6xl" />
-              </div>
+            <div class="aspect-square bg-zinc-800 rounded-lg overflow-hidden mb-4 relative">
+              <NuxtImg
+                src="/img/portfolio/murals/BOOMTOWN.jpg"
+                alt="Murals Portfolio"
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/50 to-transparent"></div>
             </div>
             <h3 class="text-xl font-bold text-lime-400 group-hover:text-lime-300">Murals</h3>
             <p class="text-gray-400">Large-scale commissions</p>
