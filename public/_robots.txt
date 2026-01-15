@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vicky-steane-art.pages.dev/sitemap.xml
